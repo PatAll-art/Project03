@@ -1,0 +1,125 @@
+$Font: Roboto;
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$softgrey: #f2f2f2;
+$color-tertiary: #99E2D0;
+
+@mixin heading-shadow{
+    -webkit-box-shadow: 0px 11px 19px -13px grey;
+   
+}
+
+body {
+    font-family: roboto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    :link {
+        text-decoration: none;
+    }
+    text-decoration: none;
+        :visited {
+        text-decoration: none;
+    }
+        :hover {
+            text-decoration: none;
+        }
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    color: black;
+    font-weight: bolder;
+}
+.logo {
+    height: 50px;
+}
+
+.btn {
+    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 30px;
+    border-style: none;
+     @include heading-shadow;
+    a {
+        color: white;
+    }
+}
+
+.opt {
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: $softgrey;
+    width: 100%;
+    text-align:start;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    .fa-solid {
+        color: grey;
+        padding-right: 15px;
+    }
+  
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    
+}
+
+.howItWorks .btn-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+.restaurants {
+    background-color: $softgrey;
+    display: flex;
+    
+}
+
+.rest-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 50%;
+    height: auto;
+    
+}
+
+.rest-item {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgb(100 100 100 / 20%);
+    margin-bottom: 35px;
+    text-align: left;
+    padding: 4px;
+    object-fit: cover;
+    width: 100%;
+    height: 169px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 169px;
+        border-radius: 20px 20px 0px 0px;
+        display: inline-block;
+    }
+}
+
+
