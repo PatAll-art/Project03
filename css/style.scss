@@ -34,7 +34,7 @@ body {
     @include mobile{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
  
 }
@@ -71,10 +71,48 @@ h1 {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    
 }
 
+.location  {
+    @include mobile {
+        background-color: #dfdfdf;
+        color: rgb(57, 57, 57);
+        padding: 12px 0 12px 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-style: inset;
+        
+    }
+}
+.fa-location-dot {
+    @include mobile {
+        padding-right: 10px;
+    }
+}
 
+.btn-container {
+    @include mobile  {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        background-color: $softgrey;
+        width: 100%;
+        padding-bottom: 50px;
+
+    }
+}
+.statement01{
+    @include mobile{
+        display: flex;
+        text-align: center;
+        padding-bottom: 10px;
+    
+    }
+}
 
 .btn {
     background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
@@ -102,6 +140,10 @@ h1 {
         color: grey;
         padding-right: 15px;
     }
+    @include mobile {
+        width: 90%;
+        align-items: center;
+    }
   
 }
 
@@ -112,8 +154,18 @@ h1 {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: auto;   
-     
+    height: auto;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    ol {
+        margin: 0;
+        padding: 0;
+    }   
+}
+    
 }
 
 .howItWorks .btn-container {
