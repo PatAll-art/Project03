@@ -3,6 +3,21 @@ body {
   font-family: roboto;
 }
 
+@media (max-width: 425px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -118,6 +133,24 @@ h1 {
   display: flex;
 }
 
+@media (max-width: 425px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .rest-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,6 +166,25 @@ h1 {
           justify-content: flex-start;
   width: 50%;
   height: auto;
+}
+
+@media (max-width: 425px) {
+  .rest-list {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .rest-item {
