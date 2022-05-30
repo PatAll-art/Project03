@@ -36,7 +36,31 @@ a :hover {
   text-decoration: none;
 }
 
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+ol li::before {
+  content: counter(li);
+  color: white;
+  display: inline-block;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+  position: relative;
+  left: -35px;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+}
+
 li {
+  counter-increment: li;
+}
+
+ul {
   list-style: none;
 }
 
@@ -118,6 +142,7 @@ h1 {
     display: flex;
     text-align: center;
     padding-bottom: 10px;
+    margin: 20px;
   }
 }
 
@@ -136,19 +161,22 @@ h1 {
 }
 
 .opt {
-  padding: 20px;
+  padding: 25px 10px 25px 20px;
   border-radius: 20px;
   font-size: 15px;
   background-color: #F2F2F2;
   width: 100%;
   text-align: start;
-  margin-bottom: 5px;
+  margin-bottom: 18px;
   font-weight: bolder;
+  margin-left: 20px;
+  -webkit-box-shadow: 0px 11px 19px -13px grey;
 }
 
 .opt .fa-solid {
   color: grey;
   padding-right: 15px;
+  font-size: 18px;
 }
 
 @media (max-width: 425px) {
@@ -157,6 +185,39 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+li:hover {
+  background-color: #9356DC;
+  opacity: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+li:hover .fa-solid :hover {
+  color: #9356DC;
+}
+
+@media (max-width: 425px) {
+  .howItWorks {
+    padding: 50px 0px 50px 0px;
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -197,7 +258,7 @@ h1 {
   }
   .information ol {
     margin: 0;
-    padding: 0;
+    padding: 0px;
   }
 }
 

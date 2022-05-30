@@ -54,11 +54,30 @@ a {
         }
 }
 
-li {
-    list-style: none;
-    
+ol {
+    list-style: none; 
+    counter-reset: li;
+    li::before {content: counter(li); color: white;
+        display: inline-block; 
+        background-color: $color-primary;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 12px;
+        position: relative;
+        left: -35px;
+        width: 12px;
+        height: 12px;
+        text-align: center;
+           
+    }
 }
 
+li {
+    counter-increment: li
+}
+ul {
+    list-style: none;
+}
 h1 {
     color: black;
     font-weight: bolder;
@@ -110,6 +129,7 @@ h1 {
         display: flex;
         text-align: center;
         padding-bottom: 10px;
+        margin: 20px;
     
     }
 }
@@ -128,23 +148,49 @@ h1 {
 }
 
 .opt {
-    padding: 20px;
+    padding: 25px 10px 25px 20px;
     border-radius: 20px;
     font-size: 15px;
     background-color: $softgrey;
     width: 100%;
     text-align:start;
-    margin-bottom: 5px;
+    margin-bottom: 18px;
     font-weight: bolder;
+    margin-left: 20px;
+    @include heading-shadow;
+
     .fa-solid {
         color: grey;
         padding-right: 15px;
+        font-size: 18px;
     }
     @include mobile {
         width: 90%;
         align-items: center;
     }
   
+}
+
+li:hover {
+    background-color: $color-primary;
+    opacity: 50%;
+    transition:all 1s;
+    .fa-solid :hover {
+        color: $color-primary;
+    }
+}
+
+.howItWorks {
+    @include mobile {
+        padding: 50px 0px 50px 0px;
+        width: 90%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    
+    }
 }
 
 .information {
@@ -162,7 +208,8 @@ h1 {
         align-items: flex-start;
     ol {
         margin: 0;
-        padding: 0;
+        padding: 0px;
+
     }   
 }
     
