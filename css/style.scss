@@ -103,10 +103,14 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-top-style: inset;
+        box-shadow: inset 0px 7px 3px -3px rgba(170, 170, 170, 0.75);
+
+    }
+    
+    
         
     }
-}
+
 .fa-location-dot {
     @include mobile {
         padding-right: 10px;
@@ -122,7 +126,7 @@ h1 {
         align-items: center;
         background-color: $softgrey;
         width: 100%;
-        padding-bottom: 50px;
+  
 
     }
 }
@@ -185,8 +189,8 @@ li:hover {
 
 .howItWorks {
     @include mobile {
-        padding: 50px 0px 50px 0px;
-        width: 90%;
+        padding: 20px 0px 50px 0px;
+        width: 100%;
         align-items: center;
         display: flex;
         flex-direction: row;
@@ -228,6 +232,7 @@ li:hover {
 
 .restaurants {
     background-color: $softgrey;
+    font-family: 'Roboto', sans-serif;
     @include mobile {
        display: flex;
        flex-direction: column;
@@ -245,6 +250,14 @@ li:hover {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
+      
+    }
+
+    .RT-Description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
     @include mobile {
         width: 100%;
@@ -275,6 +288,7 @@ li:hover {
             @include mobile {
                 padding: 0;
                 margin-left: 23px;
+                width: 123%;
             }
     
         img {
@@ -284,11 +298,7 @@ li:hover {
             border-radius: 20px 20px 0px 0px;
         }
         .description-Rest {
-            display: flex;
-            flex-direction: row;
-            line-height: 0;
-            flex-wrap: wrap;
-            align-items: stretch;
+            line-height: 5px;
         }
         h3 {
             padding-left: 10px;
@@ -338,9 +348,6 @@ li:hover {
       
     }
 
-        h1 {
-            font-family: 'Shrikhand', cursive;
-        }
         .fa-heart {
             color: $color-tertiary;
 
