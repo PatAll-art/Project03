@@ -298,6 +298,7 @@ li:hover .fa-solid :hover {
 }
 
 .Rest-Grp {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,25 +308,32 @@ li:hover .fa-solid :hover {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 @media (max-width: 425px) {
-  .Rest-Grp {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Rest-List {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .rest-item {
@@ -338,6 +346,8 @@ li:hover .fa-solid :hover {
   -o-object-fit: cover;
      object-fit: cover;
   height: 260px;
+  width: 100%;
+  margin-left: 20px;
 }
 
 .rest-item img {
@@ -346,14 +356,14 @@ li:hover .fa-solid :hover {
   width: 100%;
   height: 180px;
   border-radius: 20px 20px 0px 0px;
-  display: inline-block;
 }
 
 .rest-item h3, .rest-item p {
   padding-left: 10px;
+  font-size: 15px;
 }
 
 .rest-item .fa-heart {
-  font-size: xx-large;
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */

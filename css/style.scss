@@ -238,9 +238,12 @@ li:hover {
     
 }
 .Rest-Grp {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
     @include mobile {
         width: 100%;
         height: auto;
@@ -249,33 +252,41 @@ li:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-     }
-}
-
-.rest-item {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 20%);
-    margin-bottom: 35px;
-    text-align: left;
-    object-fit: cover;
-    height: 260px;
-
-    img {
+    }
+        .Rest-List{
+            display:flex;
+            
+        }
+     
+     .rest-item {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 20%);
+        margin-bottom: 35px;
+        text-align: left;
         object-fit: cover;
+        height: 260px;
         width: 100%;
-        height: 180px;
-        border-radius: 20px 20px 0px 0px;
-        display: inline-block;
-    }
-    h3, p {
-        padding-left: 10px;
-    }
-    .fa-heart {
- 
-        font-size: xx-large;
-    }
+        margin-left: 20px;
     
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 180px;
+            border-radius: 20px 20px 0px 0px;
+          
+        }
+        h3, p {
+            padding-left: 10px;
+            font-size: 15px;
+        }
+        .fa-heart {
+     
+            font-size: 15px;
+        }
 }
+
+    
+
 
 
