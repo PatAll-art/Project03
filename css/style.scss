@@ -304,15 +304,20 @@ li:hover {
             color: $color-tertiary;
 
         }
-footer {
-    background-color: red;
-
     }
 
-
-
-
-
+footer {
+    background-color: $drkgrey;
+    color: white;
+    padding: 30px;
+    margin:0;
+    .logo-footer {
+        height: 25px;  
+    }
+    .fa-utensils, .fa-handshake-angle {
+        padding-right: 10px;
+    }
+   
 }
 
     

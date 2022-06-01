@@ -406,7 +406,18 @@ li:hover .fa-solid :hover {
   color: #99E2D0;
 }
 
-.rest-item footer {
-  background-color: red;
+footer {
+  background-color: #4e4e4e;
+  color: white;
+  padding: 30px;
+  margin: 0;
+}
+
+footer .logo-footer {
+  height: 25px;
+}
+
+footer .fa-utensils, footer .fa-handshake-angle {
+  padding-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */
