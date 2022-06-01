@@ -3,6 +3,7 @@ $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $softgrey: #F2F2F2;
 $color-tertiary: #99E2D0;
+$drkgrey: rgb(78, 78, 78);
 $mobile-width: 425px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -249,14 +250,16 @@ li:hover {
         height: auto;
         margin:0;
         padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
         .Rest-List{
             display:flex;
-            
-        }
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            }
      
      .rest-item {
         background-color: white;
@@ -268,22 +271,48 @@ li:hover {
         height: 260px;
         width: 100%;
         margin-left: 20px;
+            @include mobile {
+                padding: 0;
+                margin-left: 23px;
+            }
     
         img {
             object-fit: cover;
             width: 100%;
             height: 180px;
             border-radius: 20px 20px 0px 0px;
-          
+        }
+        .description-Rest {
+            display: flex;
+            flex-direction: row;
+            line-height: 0;
+            flex-wrap: wrap;
+            align-items: stretch;
         }
         h3, p {
             padding-left: 10px;
-            font-size: 15px;
+            font-size: 20px;
         }
+        .heart-btn {
+            font-size: 25px;
+            border: transparent;
+            background-color: transparent;
+            display: flex;
+        }
+
         .fa-heart {
-     
-            font-size: 15px;
+            color: $color-tertiary;
+
         }
+footer {
+    background-color: red;
+
+    }
+
+
+
+
+
 }
 
     
