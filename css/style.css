@@ -136,6 +136,10 @@ h1 {
   }
 }
 
+.statement01 {
+  font-weight: lighter;
+}
+
 @media (max-width: 425px) {
   .statement01 {
     display: -webkit-box;
@@ -388,9 +392,15 @@ li:hover .fa-solid :hover {
           align-items: stretch;
 }
 
-.rest-item h3, .rest-item p {
+.rest-item h3 {
   padding-left: 10px;
   font-size: 20px;
+}
+
+.rest-item p {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 .rest-item .heart-btn {
@@ -404,6 +414,84 @@ li:hover .fa-solid :hover {
 
 .rest-item .fa-heart {
   color: #99E2D0;
+}
+
+.Rest-Img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Rest-Menu {
+  background-color: #F2F2F2;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+}
+
+.fa-heart {
+  color: #99E2D0;
+}
+
+.Rest-Elments {
+  font-weight: lighter;
+  border-bottom: solid #99E2D0 4px;
+  padding-bottom: 8px;
+  width: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-item {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2px;
+  margin: 0 0 15px 0;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
+  width: 100%;
+}
+
+.menu-item h3, .menu-item p {
+  margin: 10px;
+}
+
+.btn {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 30px;
+  border-style: none;
+  width: 15%;
+  margin: 20px 0 50px 0;
+  -webkit-box-shadow: 0px 11px 19px -13px grey;
+}
+
+.btn a {
+  color: white;
 }
 
 footer {
