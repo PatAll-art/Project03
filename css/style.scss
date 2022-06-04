@@ -174,20 +174,14 @@ h1 {
         font-size: 18px;
     }
     @include mobile {
-        width: 90%;
+    
         align-items: center;
     }
   
 }
 
-li:hover {
-    background-color: $color-primary;
-    opacity: 50%;
-    transition:all 1s;
-    .fa-solid :hover {
-        color: $color-primary;
-    }
-}
+
+
 
 .howItWorks {
     @include mobile {
@@ -197,7 +191,7 @@ li:hover {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+
     
     }
 }
@@ -345,6 +339,10 @@ li:hover {
             color: $color-tertiary;
 
         }
+        .fa-heart:hover {
+          color: $color-primary;
+          transition: 0.5;
+      
     }
 
     .logo-nav {
@@ -377,11 +375,6 @@ li:hover {
        }
       
     }
-
-        .fa-heart {
-            color: $color-tertiary;
-
-        }
         .Rest-Elments {
             font-weight: lighter;
             border-bottom:  solid $color-tertiary 4px;
@@ -449,7 +442,4 @@ footer {
    
 }
 
-    
-
-
-
+}
