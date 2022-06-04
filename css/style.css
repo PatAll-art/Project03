@@ -132,7 +132,6 @@ h1 {
         -ms-flex-align: center;
             align-items: center;
     background-color: #F2F2F2;
-    width: 100%;
   }
 }
 
@@ -438,9 +437,10 @@ li:hover .fa-solid :hover {
 
 .Rest-Img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 0;
 }
 
 .Rest-Menu {
@@ -448,6 +448,14 @@ li:hover .fa-solid :hover {
   width: 100%;
   padding: 20px;
   border-radius: 20px;
+  z-index: 1;
+  top: 300px;
+}
+
+@media (max-width: 425px) {
+  .Rest-Menu {
+    padding: 10px;
+  }
 }
 
 .fa-heart {
@@ -479,26 +487,37 @@ li:hover .fa-solid :hover {
   margin: 15px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
           box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
-  width: 90%;
+  width: 50%;
 }
 
 .menu-item h3, .menu-item p {
   margin: 10px;
 }
 
-.btn {
+@media (max-width: 425px) {
+  .menu-item {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+}
+
+.menu-title {
+  font-family: 'Shrikhand', cursive;
+}
+
+.btn-menu {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 15px;
   font-size: 15px;
   border-radius: 30px;
   border-style: none;
-  width: 50%;
   margin: 20px 0 50px 0;
+  width: 25%;
   -webkit-box-shadow: 0px 11px 19px -13px grey;
 }
 
-.btn a {
+.btn-menu a {
   color: white;
 }
 
@@ -507,6 +526,9 @@ footer {
   color: white;
   padding: 30px;
   margin: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 footer .logo-footer {
