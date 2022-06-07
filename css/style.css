@@ -188,6 +188,8 @@ h1 {
 
 .opt:hover {
   background-color: #e4d5f6;
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
 }
 
 .opt:hover .fa-solid {
@@ -446,16 +448,18 @@ h1 {
 }
 
 .rest-item .fa-heart {
-  color: #99E2D0;
+  color: #ffc6ef;
 }
 
 .rest-item .fa-heart:hover {
-  color: #9356DC;
-  -webkit-transition: 0.5;
-  transition: 0.5;
+  color: radial-gradient(circle, #a16be0 0%, #ff46cc 100%);
 }
 
-.rest-item .logo-nav {
+.rest-item .fa-heart:hover::after {
+  opacity: 1;
+}
+
+.logo-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,12 +468,12 @@ h1 {
           align-items: center;
 }
 
-.rest-item .logo-nav .logo-menu {
+.logo-nav .logo-menu {
   font-size: 20px;
   padding: 10px 70px;
 }
 
-.rest-item .Rest-Img {
+.Rest-Img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
@@ -477,7 +481,7 @@ h1 {
   z-index: 0;
 }
 
-.rest-item .Rest-Menu {
+.Rest-Menu {
   background-color: #F2F2F2;
   width: 100%;
   padding: 20px;
@@ -487,12 +491,12 @@ h1 {
 }
 
 @media (max-width: 425px) {
-  .rest-item .Rest-Menu {
+  .Rest-Menu {
     padding: 10px;
   }
 }
 
-.rest-item .Rest-Elments {
+.Rest-Elments {
   font-weight: lighter;
   border-bottom: solid #99E2D0 4px;
   padding-bottom: 8px;
@@ -510,7 +514,7 @@ h1 {
   margin: 10px;
 }
 
-.rest-item .menu-item {
+.menu-item {
   background-color: white;
   border-radius: 20px;
   padding: 2px;
@@ -520,22 +524,22 @@ h1 {
   width: 50%;
 }
 
-.rest-item .menu-item h3, .rest-item .menu-item p {
+.menu-item h3, .menu-item p {
   margin: 10px;
 }
 
 @media (max-width: 425px) {
-  .rest-item .menu-item {
+  .menu-item {
     width: 100%;
     margin: 0 0 15px 0;
   }
 }
 
-.rest-item .menu-title {
+.menu-title {
   font-family: 'Shrikhand', cursive;
 }
 
-.rest-item .btn-menu {
+.btn-menu {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 15px;
@@ -547,11 +551,11 @@ h1 {
   -webkit-box-shadow: 0px 11px 19px -13px grey;
 }
 
-.rest-item .btn-menu a {
+.btn-menu a {
   color: white;
 }
 
-.rest-item footer {
+footer {
   background-color: #4e4e4e;
   color: white;
   padding: 30px;
@@ -560,11 +564,11 @@ h1 {
   bottom: 0;
 }
 
-.rest-item footer .logo-footer {
+footer .logo-footer {
   height: 25px;
 }
 
-.rest-item footer .fa-utensils, .rest-item footer .fa-handshake-angle {
+footer .fa-utensils, footer .fa-handshake-angle {
   padding-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */
