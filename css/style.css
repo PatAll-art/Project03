@@ -186,6 +186,14 @@ h1 {
   font-size: 18px;
 }
 
+.opt:hover {
+  background-color: #e4d5f6;
+}
+
+.opt:hover .fa-solid {
+  color: #9356DC;
+}
+
 @media (max-width: 425px) {
   .opt {
     -webkit-box-align: center;

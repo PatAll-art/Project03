@@ -106,8 +106,6 @@ h1 {
         box-shadow: inset 0px 7px 3px -3px rgba(170, 170, 170, 0.75);
 
     }
-    
-    
         
     }
 
@@ -127,6 +125,7 @@ h1 {
         background-color: $softgrey;
         padding-bottom: 50px;
         width: 100%;
+        
     }
 }
 .statement01{
@@ -147,8 +146,7 @@ h1 {
     font-size: 15px;
     border-radius: 30px;
     border-style: none;
-  
-    
+
      @include heading-shadow;
     a {
         color: white;
@@ -166,6 +164,7 @@ h1 {
     margin-bottom: 18px;
     font-weight: bolder;
     margin-left: 20px;
+
     @include heading-shadow;
 
     .fa-solid {
@@ -173,10 +172,17 @@ h1 {
         padding-right: 15px;
         font-size: 18px;
     }
+    &:hover {
+        background-color: lighten($color-primary, 30);
+        .fa-solid{
+            color: $color-primary;
+        }
+}
     @include mobile {
     
         align-items: center;
     }
+    
   
 }
 
@@ -184,6 +190,7 @@ h1 {
 
 
 .howItWorks {
+
     @include mobile {
         padding: 20px 0px 50px 0px;
         width: 100%;
@@ -204,6 +211,7 @@ h1 {
     align-items: center;
     width: 100%;
     height: auto;
+
     @include mobile {
         display: flex;
         flex-direction: column;
