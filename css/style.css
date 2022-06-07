@@ -167,6 +167,16 @@ h1 {
   color: white;
 }
 
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  opacity: 80%;
+}
+
 .opt {
   padding: 25px 10px 25px 20px;
   border-radius: 20px;
