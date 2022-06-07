@@ -183,12 +183,7 @@ h1 {
     
         align-items: center;
     }
-    
-  
 }
-
-
-
 
 .howItWorks {
 
@@ -276,6 +271,7 @@ h1 {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
     }
 
     .label {
@@ -342,10 +338,11 @@ h1 {
             border: transparent;
             background-color: transparent;
             display: flex;
+            
         }
 
         .fa-heart {
-            color: lighten($color-secondary,15);
+            color: lighten($color-primary,15);
         }
        .fa-heart:hover {
         color: radial-gradient(circle, lighten($color-primary, 5) 0%, darken($color-secondary, 10) 100%);
@@ -353,6 +350,10 @@ h1 {
                 opacity: 1;
          
             }
+        }
+        &:hover {
+            background-color: lighten($color-primary, 30);
+            transition: background-color 250ms;
         }
     
     }

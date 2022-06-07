@@ -448,7 +448,7 @@ h1 {
 }
 
 .rest-item .fa-heart {
-  color: #ffc6ef;
+  color: #bc95e9;
 }
 
 .rest-item .fa-heart:hover {
@@ -457,6 +457,12 @@ h1 {
 
 .rest-item .fa-heart:hover::after {
   opacity: 1;
+}
+
+.rest-item:hover {
+  background-color: #e4d5f6;
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
 }
 
 .logo-nav {
