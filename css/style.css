@@ -494,15 +494,12 @@ h1 {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 0;
 }
 
 .Rest-Menu {
   background-color: #F2F2F2;
   padding: 20px;
-  border-radius: 20px;
-  z-index: 1;
-  top: 300px;
+  border-radius: 20px 20px 0 0px;
   -webkit-transition: -webkit-transform 600ms ease-in;
   transition: -webkit-transform 600ms ease-in;
   transition: transform 600ms ease-in;
@@ -543,11 +540,21 @@ h1 {
 .menu-item {
   background-color: white;
   border-radius: 20px;
-  padding: 2px;
   margin: 25px 0;
   -webkit-box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
           box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
-  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-animation: vertical-glide 3s ease-in-out forwards;
           animation: vertical-glide 3s ease-in-out forwards;
 }
@@ -556,9 +563,61 @@ h1 {
   margin: 10px;
 }
 
+.menu-item .checkmark-icon {
+  color: white;
+  background-color: #99E2D0;
+  font-size: 22px;
+  padding: 22px;
+  border-radius: 0 20px 20px 0;
+  width: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.menu-item .checkmark-icon .fa-circle-check {
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.menu-item .checkmark-icon .fa-circle-check:hover {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+}
+
 @media (max-width: 425px) {
   .menu-item {
     width: 95%;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
