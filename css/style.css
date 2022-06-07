@@ -544,7 +544,7 @@ h1 {
   background-color: white;
   border-radius: 20px;
   padding: 2px;
-  margin: 15px;
+  margin: 25px 0;
   -webkit-box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
           box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
   width: 50%;
@@ -559,14 +559,13 @@ h1 {
 @media (max-width: 425px) {
   .menu-item {
     width: 95%;
-    margin: 0 0 15px 0;
   }
 }
 
 @-webkit-keyframes vertical-glide {
   100% {
-    -webkit-transform: translateY(-5%);
-            transform: translateY(-5%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   0% {
     opacity: 0;
@@ -578,8 +577,8 @@ h1 {
 
 @keyframes vertical-glide {
   100% {
-    -webkit-transform: translateY(-5%);
-            transform: translateY(-5%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   0% {
     opacity: 0;

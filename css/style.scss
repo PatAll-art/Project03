@@ -414,7 +414,7 @@ h1 {
             background-color: white;
             border-radius: 20px;
             padding: 2px;
-            margin: 15px;
+            margin: 25px 0;
             box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
             width: 50%;
             animation: vertical-glide 3s ease-in-out forwards;
@@ -423,20 +423,18 @@ h1 {
             }
             @include mobile {
                 width: 95%;
-                margin: 0 0 15px 0;
             }
 
             @keyframes vertical-glide {
 
                 100% {
-                    transform: translateY(-5%);
+                    transform: translateY(-10%);
                 }
                 0% { opacity: 0; }
                 100% { opacity: 1; }
-              
                 
             }
-
+        
         }
         .menu-title {
             font-family: 'Shrikhand', cursive;
