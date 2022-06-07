@@ -499,16 +499,26 @@ h1 {
 
 .Rest-Menu {
   background-color: #F2F2F2;
-  width: 100%;
   padding: 20px;
   border-radius: 20px;
   z-index: 1;
   top: 300px;
+  -webkit-transition: -webkit-transform 600ms ease-in;
+  transition: -webkit-transform 600ms ease-in;
+  transition: transform 600ms ease-in;
+  transition: transform 600ms ease-in, -webkit-transform 600ms ease-in;
 }
 
 @media (max-width: 425px) {
   .Rest-Menu {
     padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -538,6 +548,8 @@ h1 {
   -webkit-box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
           box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
   width: 50%;
+  -webkit-animation: vertical-glide 3s ease-in-out forwards;
+          animation: vertical-glide 3s ease-in-out forwards;
 }
 
 .menu-item h3, .menu-item p {
@@ -546,13 +558,50 @@ h1 {
 
 @media (max-width: 425px) {
   .menu-item {
-    width: 100%;
+    width: 95%;
     margin: 0 0 15px 0;
+  }
+}
+
+@-webkit-keyframes vertical-glide {
+  100% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes vertical-glide {
+  100% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
 .menu-title {
   font-family: 'Shrikhand', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+}
+
+.menu-heart {
+  color: #fface8;
 }
 
 .btn-menu {
@@ -569,6 +618,15 @@ h1 {
 
 .btn-menu a {
   color: white;
+}
+
+@media (max-width: 425px) {
+  .btn-menu {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 footer {

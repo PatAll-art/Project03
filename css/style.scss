@@ -383,13 +383,16 @@ h1 {
 
     .Rest-Menu {
         background-color: #F2F2F2;
-        width: 100%;
         padding:20px;
         border-radius: 20px;
         z-index: 1;
         top: 300px;
+        transition: transform 600ms ease-in;
        @include mobile {
            padding: 10px;
+           display: flex;
+            flex-direction: column;
+       
        }
       
     }
@@ -402,6 +405,7 @@ h1 {
             flex-direction: row;
             align-items: center;
             margin: 10px;
+          
     
     
         }
@@ -413,17 +417,35 @@ h1 {
             margin: 15px;
             box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
             width: 50%;
+            animation: vertical-glide 3s ease-in-out forwards;
             h3, p{
                 margin: 10px;
             }
             @include mobile {
-                width: 100%;
+                width: 95%;
                 margin: 0 0 15px 0;
+            }
+
+            @keyframes vertical-glide {
+
+                100% {
+                    transform: translateY(-5%);
+                }
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+              
+                
             }
 
         }
         .menu-title {
             font-family: 'Shrikhand', cursive;
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+        }
+        .menu-heart {
+            color:lighten(#FF79DA, 10);
         }
 
         .btn-menu {
@@ -438,6 +460,11 @@ h1 {
             a {
                 color: white;
             }
+            @include mobile {
+                width: 50%;
+                align-self: center;
+            }
+
         }
 
     
