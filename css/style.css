@@ -460,19 +460,24 @@ h1 {
   display: flex;
 }
 
-.rest-item .fa-solid {
-  display: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.rest-item .heart_btn:hover .fa-solid {
+.rest-item .fa-regular {
+  color: #4e4e4e;
   display: inline;
 }
 
-.rest-item .heart_btn:hover .fa-regular {
+.rest-item .fa-solid {
   display: none;
+}
+
+.rest-item .heart-btn:hover .fa-regular {
+  display: none;
+}
+
+.rest-item .heart-btn:hover .fa-solid {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline !important;
 }
 
 .rest-item:hover {
@@ -481,7 +486,7 @@ h1 {
   transition: background-color 250ms;
 }
 
-.logo-nav {
+.rest-item .logo-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,19 +495,19 @@ h1 {
           align-items: center;
 }
 
-.logo-nav .logo-menu {
+.rest-item .logo-nav .logo-menu {
   font-size: 20px;
   padding: 10px 70px;
 }
 
-.Rest-Img {
+.rest-item .Rest-Img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.Rest-Menu {
+.rest-item .Rest-Menu {
   background-color: #F2F2F2;
   padding: 20px;
   border-radius: 20px 20px 0 0px;
@@ -513,7 +518,7 @@ h1 {
 }
 
 @media (max-width: 425px) {
-  .Rest-Menu {
+  .rest-item .Rest-Menu {
     padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -525,7 +530,7 @@ h1 {
   }
 }
 
-.Rest-Elments {
+.rest-item .Rest-Elments {
   font-weight: lighter;
   border-bottom: solid #99E2D0 4px;
   padding-bottom: 8px;
@@ -543,7 +548,7 @@ h1 {
   margin: 10px;
 }
 
-.menu-item {
+.rest-item .menu-item {
   background-color: white;
   border-radius: 20px;
   margin: 25px 0;
@@ -565,11 +570,11 @@ h1 {
           animation: vertical-glide 3s ease-in-out forwards;
 }
 
-.menu-item h3, .menu-item p {
+.rest-item .menu-item h3, .rest-item .menu-item p {
   margin: 10px;
 }
 
-.menu-item .checkmark-icon {
+.rest-item .menu-item .checkmark-icon {
   color: white;
   background-color: #99E2D0;
   font-size: 22px;
@@ -581,7 +586,7 @@ h1 {
       align-self: center;
 }
 
-.menu-item .checkmark-icon .fa-circle-check {
+.rest-item .menu-item .checkmark-icon .fa-circle-check {
   -webkit-transition: 2.5s;
   transition: 2.5s;
   -webkit-animation-duration: 1s;
@@ -594,13 +599,13 @@ h1 {
           animation-direction: normal;
 }
 
-.menu-item .checkmark-icon .fa-circle-check:hover {
+.rest-item .menu-item .checkmark-icon .fa-circle-check:hover {
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
 }
 
 @media (max-width: 425px) {
-  .menu-item {
+  .rest-item .menu-item {
     width: 95%;
   }
 }
@@ -653,7 +658,7 @@ h1 {
   }
 }
 
-.menu-title {
+.rest-item .menu-title {
   font-family: 'Shrikhand', cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -664,11 +669,11 @@ h1 {
   width: 95%;
 }
 
-.menu-heart {
+.rest-item .menu-heart {
   color: #fface8;
 }
 
-.btn-menu {
+.rest-item .btn-menu {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 15px;
@@ -680,12 +685,12 @@ h1 {
   -webkit-box-shadow: 0px 11px 19px -13px grey;
 }
 
-.btn-menu a {
+.rest-item .btn-menu a {
   color: white;
 }
 
 @media (max-width: 425px) {
-  .btn-menu {
+  .rest-item .btn-menu {
     width: 50%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -693,7 +698,7 @@ h1 {
   }
 }
 
-footer {
+.rest-item footer {
   background-color: #4e4e4e;
   color: white;
   padding: 30px;
@@ -702,11 +707,11 @@ footer {
   bottom: 0;
 }
 
-footer .logo-footer {
+.rest-item footer .logo-footer {
   height: 25px;
 }
 
-footer .fa-utensils, footer .fa-handshake-angle {
+.rest-item footer .fa-utensils, .rest-item footer .fa-handshake-angle {
   padding-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */

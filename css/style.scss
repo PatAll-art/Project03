@@ -349,26 +349,31 @@ h1 {
             
         }
 
+        .fa-regular {
+            color: $drkgrey;
+            display: inline;
+
+        }
         .fa-solid {
             display: none;
-            background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
-        
-        .heart_btn:hover .fa-solid{
-            display: inline;
-        }
-        
-        .heart_btn:hover .fa-regular{
+        .heart-btn:hover .fa-regular {
             display: none;
         }
+        .heart-btn:hover .fa-solid {
+                background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline !important;
+            
+        }
+       
         &:hover {
             background-color: lighten($color-primary, 30);
             transition: background-color 250ms;
         }
     
-    }
+    
 
     .logo-nav {
         display: flex;
@@ -525,3 +530,4 @@ footer {
    
 }
 
+     }
