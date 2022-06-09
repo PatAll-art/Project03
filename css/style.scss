@@ -283,7 +283,9 @@ h1 {
         background-color: $color-tertiary;
         padding: 5px 20px;
         font-size: 12px;
-        position: relative;
+        position: absolute;
+        right: 10px;
+        top: 16px;
         
     }
     @include mobile {
@@ -312,6 +314,7 @@ h1 {
         height: 260px;
         width: 100%;
         margin: 0 20px 20px 0;
+        position: relative;
             @include mobile {
                 padding: 0;
                 width: 100%;
@@ -346,15 +349,19 @@ h1 {
             
         }
 
-        .fa-heart {
-            color: lighten($color-primary,15);
+        .fa-solid {
+            display: none;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-       .fa-heart:hover {
-        color: radial-gradient(circle, lighten($color-primary, 5) 0%, darken($color-secondary, 10) 100%);
-            &::after {
-                opacity: 1;
-         
-            }
+        
+        .heart_btn:hover .fa-solid{
+            display: inline;
+        }
+        
+        .heart_btn:hover .fa-regular{
+            display: none;
         }
         &:hover {
             background-color: lighten($color-primary, 30);

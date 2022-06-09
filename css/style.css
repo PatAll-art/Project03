@@ -369,7 +369,9 @@ h1 {
   background-color: #99E2D0;
   padding: 5px 20px;
   font-size: 12px;
-  position: relative;
+  position: absolute;
+  right: 10px;
+  top: 16px;
 }
 
 @media (max-width: 425px) {
@@ -414,6 +416,7 @@ h1 {
   height: 260px;
   width: 100%;
   margin: 0 20px 20px 0;
+  position: relative;
 }
 
 @media (max-width: 425px) {
@@ -457,16 +460,19 @@ h1 {
   display: flex;
 }
 
-.rest-item .fa-heart {
-  color: #bc95e9;
+.rest-item .fa-solid {
+  display: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.rest-item .fa-heart:hover {
-  color: radial-gradient(circle, #a16be0 0%, #ff46cc 100%);
+.rest-item .heart_btn:hover .fa-solid {
+  display: inline;
 }
 
-.rest-item .fa-heart:hover::after {
-  opacity: 1;
+.rest-item .heart_btn:hover .fa-regular {
+  display: none;
 }
 
 .rest-item:hover {
