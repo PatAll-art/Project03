@@ -74,6 +74,9 @@ ol {
         text-align: center;
            
     }
+    @include tablet{
+        padding: 0;
+    }
 }
 
 li {
@@ -192,6 +195,10 @@ h1 {
     
         align-items: center;
     }
+
+    @include tablet{
+        margin-left: 0;
+    }
 }
 
 .howItWorks {
@@ -253,11 +260,14 @@ h1 {
        margin: 0;
        padding: 0;
     }
+    @include tablet {
+        padding: 10px 0 10px 15px;
+    }
     
 }
 .Restaurant-h {
     @include mobile {
-        padding-left: 35px;
+        padding-left: 26px;
     }
 }
 .Rest-Grp {
@@ -304,8 +314,13 @@ h1 {
                 flex-direction: column;
                 flex-wrap: wrap;
                 align-items: center;
+                width: 86%;
             }
-            
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
             }
      .rest-item {
         background-color: white;

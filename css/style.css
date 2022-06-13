@@ -56,6 +56,12 @@ ol li::before {
   text-align: center;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  ol {
+    padding: 0;
+  }
+}
+
 li {
   counter-increment: li;
 }
@@ -216,6 +222,12 @@ h1 {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .opt {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 425px) {
   .howItWorks {
     padding: 20px 0px 50px 0px;
@@ -313,9 +325,15 @@ h1 {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .restaurants {
+    padding: 10px 0 10px 15px;
+  }
+}
+
 @media (max-width: 425px) {
   .Restaurant-h {
-    padding-left: 35px;
+    padding-left: 26px;
   }
 }
 
@@ -403,6 +421,21 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 86%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Rest-List {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
