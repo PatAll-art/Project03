@@ -62,7 +62,9 @@ body {
     position: fixed;
     left: 45%;
     top: 25%;
-  
+   .logo-loader {
+    background-color: white;
+   }
 
     @include mobile  {
         top: 25%;
@@ -133,7 +135,7 @@ h1 {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    animation: vertical-glide 4s ease-in forwards;
+    animation: vertical-glide 1s ease-in forwards;
 }
 
 .location  {
@@ -259,7 +261,7 @@ h1 {
     align-items: center;
     width: 100%;
     height: auto;
-    animation: vertical-glide 4s ease-in forwards;
+    animation: vertical-glide 1s ease-in forwards;
   
 
     @include mobile {
@@ -289,7 +291,7 @@ h1 {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     padding: 10px 0 10px 40px;
-    animation: vertical-glide 4s ease-in forwards;
+    animation: vertical-glide 1s ease-in forwards;
     @include mobile {
        display: flex;
        flex-direction: column;
@@ -568,7 +570,7 @@ footer {
         margin:0;
         position: relative;
         bottom: 0;
-        animation: vertical-glide 4s ease-in forwards;
+        animation: vertical-glide 1s ease-in forwards;
       
         .logo-footer {
             height: 25px;  

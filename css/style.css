@@ -47,6 +47,10 @@ body {
   top: 25%;
 }
 
+.loader .logo-loader {
+  background-color: white;
+}
+
 @media (max-width: 425px) {
   .loader {
     top: 25%;
@@ -156,8 +160,8 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: vertical-glide 4s ease-in forwards;
-          animation: vertical-glide 4s ease-in forwards;
+  -webkit-animation: vertical-glide 1s ease-in forwards;
+          animation: vertical-glide 1s ease-in forwards;
 }
 
 @media (max-width: 425px) {
@@ -330,8 +334,8 @@ h1 {
           align-items: center;
   width: 100%;
   height: auto;
-  -webkit-animation: vertical-glide 4s ease-in forwards;
-          animation: vertical-glide 4s ease-in forwards;
+  -webkit-animation: vertical-glide 1s ease-in forwards;
+          animation: vertical-glide 1s ease-in forwards;
 }
 
 @media (max-width: 425px) {
@@ -372,8 +376,8 @@ h1 {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   padding: 10px 0 10px 40px;
-  -webkit-animation: vertical-glide 4s ease-in forwards;
-          animation: vertical-glide 4s ease-in forwards;
+  -webkit-animation: vertical-glide 1s ease-in forwards;
+          animation: vertical-glide 1s ease-in forwards;
 }
 
 @media (max-width: 425px) {
@@ -811,8 +815,8 @@ footer {
   margin: 0;
   position: relative;
   bottom: 0;
-  -webkit-animation: vertical-glide 4s ease-in forwards;
-          animation: vertical-glide 4s ease-in forwards;
+  -webkit-animation: vertical-glide 1s ease-in forwards;
+          animation: vertical-glide 1s ease-in forwards;
 }
 
 footer .logo-footer {
