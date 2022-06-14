@@ -275,8 +275,8 @@ h1 {
 
 .opt:hover {
   background-color: #e4d5f6;
-  -webkit-transition: background-color 250ms;
-  transition: background-color 250ms;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
 }
 
 .opt:hover .fa-solid {
@@ -806,6 +806,48 @@ h1 {
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+
+.contact {
+  margin: 50px;
+}
+
+.contact .contact-form {
+  font-family: Roboto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+}
+
+.contact .form-box-name {
+  border-radius: 20px;
+  border-color: #9356DC;
+  height: 20px;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.contact .form-box {
+  border-radius: 20px;
+  border-color: #9356DC;
+  height: 100px;
+  font-family: Roboto;
+  padding: 15px;
+}
+
+.contact .btn {
+  width: 25%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 25px;
 }
 
 footer {

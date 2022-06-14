@@ -224,7 +224,7 @@ h1 {
     }
     &:hover {
         background-color: lighten($color-primary, 30);
-        transition: background-color 250ms;
+        transition: background-color 500ms;
         .fa-solid{
             color: $color-primary;
         }
@@ -423,7 +423,7 @@ h1 {
                 -webkit-background-clip: text;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                display: inline;
+                display: inline;  
             
         }
        
@@ -561,6 +561,40 @@ h1 {
                 }
             
             }
+
+.contact {
+    margin: 50px;
+
+
+    .contact-form {
+        font-family: $Font;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    .form-box-name {
+        border-radius: 20px;
+        border-color: $color-primary;
+        height: 20px;
+        padding: 5px;
+        margin-bottom: 25px;
+    
+    }
+    .form-box {
+        border-radius: 20px;
+        border-color: $color-primary;
+        height: 100px;
+        font-family: $Font;
+        padding: 15px;
+     
+    }
+    .btn {
+        width: 25%;
+        align-self: center;
+        margin-top: 25px;
+    }
+}
         
     
 footer {
