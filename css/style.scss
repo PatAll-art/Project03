@@ -482,8 +482,14 @@ h1 {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 animation: vertical-glide 3s ease-in-out forwards;
+                overflow: hidden;
+                display: grid;
                 h3, p{
                     margin: 10px;
+                    width: 200px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 .checkmark-icon {
     
@@ -501,8 +507,10 @@ h1 {
                         animation-name: slidein;
                         animation-iteration-count: 1;
                         animation-direction:normal;
+                        white-space: nowrap;
                         &:hover {
                             transform:rotate(720deg);
+                            left: 0;
                         }
                     }
                 }
@@ -510,6 +518,7 @@ h1 {
                 @include mobile {
                     width: 95%;
                 }
+               
              
                 @keyframes slidein {
                     from {

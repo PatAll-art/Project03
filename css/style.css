@@ -706,11 +706,13 @@ h1 {
           animation-iteration-count: 1;
   -webkit-animation-direction: normal;
           animation-direction: normal;
+  white-space: nowrap;
 }
 
 .menu-item .checkmark-icon .fa-circle-check:hover {
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
+  left: 0;
 }
 
 @media (max-width: 425px) {
