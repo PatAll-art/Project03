@@ -18,6 +18,69 @@ body {
   }
 }
 
+.loader {
+  content: " ";
+  background-color: white;
+  border: 16px solid #FF79DA;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 3s ease-out forwards;
+          animation: spin 3s ease-out forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 1000;
+  position: fixed;
+  left: 45%;
+  top: 25%;
+}
+
+@media (max-width: 425px) {
+  .loader {
+    top: 25%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    left: auto;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -93,6 +156,8 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: vertical-glide 4s ease-in forwards;
+          animation: vertical-glide 4s ease-in forwards;
 }
 
 @media (max-width: 425px) {
@@ -265,6 +330,8 @@ h1 {
           align-items: center;
   width: 100%;
   height: auto;
+  -webkit-animation: vertical-glide 4s ease-in forwards;
+          animation: vertical-glide 4s ease-in forwards;
 }
 
 @media (max-width: 425px) {
@@ -305,6 +372,8 @@ h1 {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   padding: 10px 0 10px 40px;
+  -webkit-animation: vertical-glide 4s ease-in forwards;
+          animation: vertical-glide 4s ease-in forwards;
 }
 
 @media (max-width: 425px) {
@@ -742,6 +811,8 @@ footer {
   margin: 0;
   position: relative;
   bottom: 0;
+  -webkit-animation: vertical-glide 4s ease-in forwards;
+          animation: vertical-glide 4s ease-in forwards;
 }
 
 footer .logo-footer {
