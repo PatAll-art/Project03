@@ -666,57 +666,53 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-animation: vertical-glide 3s ease-in-out forwards;
           animation: vertical-glide 3s ease-in-out forwards;
-  display: -ms-grid;
-  display: grid;
 }
 
 .menu-item h3, .menu-item p {
-  margin: 10px;
-  width: 200px;
+  margin: 8px;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.menu-item:hover .checkmark-icon {
+  width: 70px;
+}
+
+.menu-item:hover .fa-circle-check {
+  display: inline;
+}
+
 .menu-item .checkmark-icon {
   color: white;
   background-color: #99E2D0;
-  font-size: 22px;
   padding: 22px;
+  font-size: 22px;
   border-radius: 0 20px 20px 0;
-  width: 20px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   position: absolute;
   bottom: 0;
   right: 0;
   height: 22px;
+  width: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .menu-item .fa-circle-check {
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-transition: 600ms;
+  transition: 600ms;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
   -webkit-animation-direction: normal;
           animation-direction: normal;
   white-space: nowrap;
+  display: none;
 }
 
 .menu-item .fa-circle-check:hover {
@@ -727,28 +723,6 @@ h1 {
 
 @media (max-width: 425px) {
   width: 95%;
-}
-
-@-webkit-keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
 
 @-webkit-keyframes vertical-glide {
