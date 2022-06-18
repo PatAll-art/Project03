@@ -592,11 +592,15 @@ h1 {
                 a {
                     color: white;
                 }
+                &:hover{
+                    transform: scale(1.1);
+                    transition: transform .3s;
+                    opacity: 80%;
+                }
                 @include mobile {
                     width: 50%;
                     align-self: center;
                 }
-            
             }
 
 .contact {
