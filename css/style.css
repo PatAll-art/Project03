@@ -671,6 +671,12 @@ h1 {
   width: 40%;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Full-Menu {
+    width: 100%;
+  }
+}
+
 @media (max-width: 425px) {
   .Full-Menu {
     width: 100%;

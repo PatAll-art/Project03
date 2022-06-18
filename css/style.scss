@@ -479,7 +479,11 @@ h1 {
             .Full-Menu {
                 width: 40%;
                
-                @include mobile{
+                @include tablet {
+                    width: 100%;
+                }
+               
+                @include mobile {
                     width: 100%;
                 }
                
