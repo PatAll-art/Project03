@@ -452,10 +452,14 @@ h1 {
             padding:20px;
             border-radius: 20px 20px 0 0px;
             transition: transform 600ms ease-in;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
            @include mobile {
                padding: 10px;
                display: flex;
                 flex-direction: column;
+              
            
            }
           
@@ -470,6 +474,15 @@ h1 {
                 align-items: center;
                 margin: 10px;
         
+            }
+
+            .Full-Menu {
+                width: 40%;
+               
+                @include mobile{
+                    width: 100%;
+                }
+               
             }
     
             .menu-item {
@@ -488,7 +501,10 @@ h1 {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow:ellipsis;
+
                 }
+
+                
                 &:hover .checkmark-icon {
                         width: 70px;
                     
@@ -499,7 +515,7 @@ h1 {
                 }
                 .checkmark-icon {
                     color: white;
-                    background-color: $color-tertiary;
+                    background-color: white;
                     padding: 22px;
                     font-size: 22px;
                     border-radius: 0 20px 20px 0;
@@ -509,7 +525,9 @@ h1 {
                     height: 22px;
                     width: 0;
                     transition: 0.5s ease-in-out;
-                 
+                    &:hover {
+                        background-color: $color-tertiary;
+                    }
                     }
                     .fa-circle-check {
                         transition: 600ms;
@@ -546,6 +564,13 @@ h1 {
                 display: flex;
                 justify-content: space-between;
                 width: 95%;
+                justify-content: space-evenly;
+
+                @include mobile{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
             }
             .menu-heart {
                 color:lighten(#FF79DA, 10);

@@ -624,6 +624,16 @@ h1 {
   transition: -webkit-transform 600ms ease-in;
   transition: transform 600ms ease-in;
   transition: transform 600ms ease-in, -webkit-transform 600ms ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 425px) {
@@ -655,6 +665,16 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   margin: 10px;
+}
+
+.Full-Menu {
+  width: 40%;
+}
+
+@media (max-width: 425px) {
+  .Full-Menu {
+    width: 100%;
+  }
 }
 
 .menu-item {
@@ -691,7 +711,7 @@ h1 {
 
 .menu-item .checkmark-icon {
   color: white;
-  background-color: #99E2D0;
+  background-color: white;
   padding: 22px;
   font-size: 22px;
   border-radius: 0 20px 20px 0;
@@ -702,6 +722,10 @@ h1 {
   width: 0;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+}
+
+.menu-item .checkmark-icon:hover {
+  background-color: #99E2D0;
 }
 
 .menu-item .fa-circle-check {
@@ -760,6 +784,24 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 95%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 425px) {
+  .menu-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .menu-heart {
