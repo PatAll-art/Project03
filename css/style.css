@@ -910,4 +910,12 @@ footer .logo-footer {
 footer .fa-utensils, footer .fa-handshake-angle {
   padding-right: 10px;
 }
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #9356DC;
+}
 /*# sourceMappingURL=style.css.map */

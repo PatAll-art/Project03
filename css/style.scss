@@ -653,6 +653,16 @@ footer {
         .fa-utensils, .fa-handshake-angle {
             padding-right: 10px;
         }
+
+        a {
+            color: white;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+       
+
+
        
     }
 
