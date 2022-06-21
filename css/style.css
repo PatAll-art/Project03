@@ -165,6 +165,12 @@ h1 {
 }
 
 @media (max-width: 425px) {
+  .logo-location {
+    margin: 10px 0 56px 0;
+  }
+}
+
+@media (max-width: 425px) {
   .location {
     background-color: #dfdfdf;
     color: #393939;
@@ -299,7 +305,7 @@ h1 {
 
 @media (max-width: 425px) {
   .howItWorks {
-    padding: 20px 0px 50px 0px;
+    padding: 20px 0px 90px 0px;
     width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;

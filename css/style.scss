@@ -136,6 +136,9 @@ h1 {
     flex-wrap: nowrap;
     align-items: center;
     animation: vertical-glide 1s ease-in forwards;
+    @include mobile {
+       margin: 10px 0 56px 0;
+    }
 }
 
 .location  {
@@ -242,7 +245,7 @@ h1 {
 .howItWorks {
 
     @include mobile {
-        padding: 20px 0px 50px 0px;
+        padding: 20px 0px 90px 0px;
         width: 100%;
         align-items: center;
         display: flex;
