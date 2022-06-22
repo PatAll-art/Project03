@@ -474,10 +474,13 @@ h1 {
 }
 
 @media (max-width: 425px) {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
+  .label {
+    width: 12%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    font-family: Roboto;
+  }
 }
 
 .Rest-List {
@@ -719,6 +722,9 @@ h1 {
 
 .menu-item:hover .fa-circle-check {
   display: inline;
+  -webkit-transform: rotate(360deg) 3s ease-in-out;
+          transform: rotate(360deg) 3s ease-in-out;
+  left: 0;
 }
 
 .menu-item .checkmark-icon {
@@ -751,14 +757,10 @@ h1 {
   display: none;
 }
 
-.menu-item .fa-circle-check:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  left: 0;
-}
-
 @media (max-width: 425px) {
-  width: 95%;
+  .menu-item {
+    width: 95%;
+  }
 }
 
 @-webkit-keyframes vertical-glide {
@@ -784,6 +786,20 @@ h1 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -860,6 +876,13 @@ h1 {
   margin: 50px;
 }
 
+@media (max-width: 425px) {
+  .contact {
+    width: 100%;
+    margin: 0 0 50px 10px;
+  }
+}
+
 .contact .contact-form {
   font-family: Roboto;
   display: -webkit-box;
@@ -872,6 +895,12 @@ h1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 50%;
+}
+
+@media (max-width: 425px) {
+  .contact .contact-form {
+    width: 90%;
+  }
 }
 
 .contact .form-box-name {
@@ -898,12 +927,17 @@ h1 {
   margin-top: 25px;
 }
 
+@media (max-width: 425px) {
+  .contact .btn {
+    width: 50%;
+  }
+}
+
 footer {
   background-color: #4e4e4e;
   color: white;
   padding: 30px;
   margin: 0;
-  position: relative;
   bottom: 0;
   -webkit-animation: vertical-glide 1s ease-in forwards;
           animation: vertical-glide 1s ease-in forwards;

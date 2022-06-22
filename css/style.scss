@@ -343,14 +343,19 @@ h1 {
         position: absolute;
         right: 10px;
         top: 16px;
-        
+       
+
+        @include mobile {
+            width: 12%;
+            height: auto;
+            margin: 5px;
+            padding: 5px;
+            font-family: $Font;
+
+          
+        }
     }
-    @include mobile {
-        width: 100%;
-        height: auto;
-        margin:0;
-        padding: 0;
-    }
+
         .Rest-List{
             display:flex;
             @include mobile {
@@ -514,10 +519,12 @@ h1 {
                 
                 &:hover .checkmark-icon {
                         width: 70px;
-                    
+                       
                 }
                 &:hover .fa-circle-check{
                     display: inline;
+                    transform: rotate(360deg) 3s ease-in-out;
+                    left: 0;
                     
                 }
                 .checkmark-icon {
@@ -532,8 +539,10 @@ h1 {
                     height: 22px;
                     width: 0;
                     transition: 0.5s ease-in-out;
+                    
                     &:hover {
                         background-color: $color-tertiary;
+                      
                     }
                     }
                     .fa-circle-check {
@@ -542,19 +551,14 @@ h1 {
                         animation-direction:normal;
                         white-space: nowrap;
                         display: none;
-                        &:hover {
-                            transform:rotate(360deg);
-                            left: 0;
-                            
-                        }
+                        
+                    }
+                    @include mobile {
+                        width: 95%;
                     }
                 
                 }
-                @include mobile {
-                    width: 95%;
-                }
-               
-    
+              
                 @keyframes vertical-glide {
     
                     100% {
@@ -563,6 +567,14 @@ h1 {
                     0% { opacity: 0; }
                     100% { opacity: 1; }
                     
+                }
+                @keyframes rotate {
+
+                100% {
+
+                    transform: rotate(360deg);
+
+                }
                 }
             
             
@@ -608,7 +620,12 @@ h1 {
 
 .contact {
     margin: 50px;
-
+    @include mobile {
+        width: 100%;
+        margin: 0 0 50px 10px;
+        
+        
+    }
 
     .contact-form {
         font-family: $Font;
@@ -616,6 +633,8 @@ h1 {
         flex-direction: column;
         flex-wrap: wrap;
         width: 50%;
+        @include mobile {
+            width: 90%;}
     }
     .form-box-name {
         border-radius: 20px;
@@ -637,8 +656,12 @@ h1 {
         width: 25%;
         align-self: center;
         margin-top: 25px;
+        @include mobile {
+            width: 50%;}
     }
-}
+    }
+   
+
         
     
 footer {
@@ -646,7 +669,7 @@ footer {
         color: white;
         padding: 30px;
         margin:0;
-        position: relative;
+       
         bottom: 0;
         animation: vertical-glide 1s ease-in forwards;
       
