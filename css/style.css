@@ -722,10 +722,9 @@ h1 {
 }
 
 .menu-item:hover .fa-circle-check {
-  display: inline;
-  -webkit-transform: rotate(360deg) 3s ease-in-out;
-          transform: rotate(360deg) 3s ease-in-out;
-  left: 0;
+  display: inline-block;
+  -webkit-animation: rotate 1000ms;
+          animation: rotate 1000ms;
 }
 
 .menu-item .checkmark-icon {

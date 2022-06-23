@@ -495,9 +495,9 @@ h1 {
     width: 70px;
   }
   &:hover .fa-circle-check {
-    display: inline;
-    transform: rotate(360deg) 3s ease-in-out;
-    left: 0;
+    display: inline-block;
+    animation: rotate 1000ms;
+  
   }
   .checkmark-icon {
     color: white;
@@ -539,11 +539,13 @@ h1 {
     opacity: 1;
   }
 }
+
 @keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 
 .menu-title {
   font-family: $logoFont;
