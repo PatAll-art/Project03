@@ -1,9 +1,9 @@
 $Font: Roboto;
-$logoFont:'Shrikhand', cursive;
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$softgrey: #F2F2F2;
-$color-tertiary: #99E2D0;
+$logoFont: "Shrikhand", cursive;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$softgrey: #f2f2f2;
+$color-tertiary: #99e2d0;
 $drkgrey: rgb(78, 78, 78);
 $mobile-width: 425px;
 $tablet-width: 768px;
@@ -11,685 +11,646 @@ $desktop-width: 1024px;
 
 @import url(https://kit.fontawesome.com/ee046bd2cc.js);
 
-
-@mixin heading-shadow{
-    -webkit-box-shadow: 0px 11px 19px -13px grey;
-    box-shadow: 0px 11px 19px -13px grey;
+@mixin heading-shadow {
+  -webkit-box-shadow: 0px 11px 19px -13px grey;
+  box-shadow: 0px 11px 19px -13px grey;
 }
 @mixin mobile {
-    @media (max-width: #{$mobile-width}) {
-      @content;
-    }
+  @media (max-width: #{$mobile-width}) {
+    @content;
   }
+}
 @mixin tablet {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-      @content;
-    }
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
   }
-  @mixin desktop {
-    @media (min-width: #{$desktop-width}) {
-      @content;
-    }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
   }
-
-
-
-
-body {
-    font-family: roboto;
-    @include mobile{
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
 }
 
- .loader {
-    content: " ";
-    background-color: white;
-    border: 16px solid $color-secondary;
-    border-radius: 50%;
-    border-top: 16px solid $color-primary;
-    width: 120px;
-    height: 120px;
-    animation: spin 3s ease-out forwards;
+body {
+  font-family: roboto;
+  @include mobile {
     display: flex;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    align-content: center;
-    z-index: 1000;
-    position: fixed;
-    left: 45%;
-    top: 25%;
-   .logo-loader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.loader {
+  content: " ";
+  background-color: white;
+  border: 16px solid $color-secondary;
+  border-radius: 50%;
+  border-top: 16px solid $color-primary;
+  width: 120px;
+  height: 120px;
+  animation: spin 3s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  z-index: 1000;
+  position: fixed;
+  left: 45%;
+  top: 25%;
+  .logo-loader {
     background-color: white;
-   }
-
-    @include mobile  {
-        top: 25%;
-        align-self: center;
-        left: auto;
-    }
-
-  }  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); 
-    opacity: 0;}
-    
   }
 
+  @include mobile {
+    top: 25%;
+    align-self: center;
+    left: auto;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
 a {
+  text-decoration: none;
+  color: black;
+  :link {
     text-decoration: none;
-    color: black;
-    :link {
-        text-decoration: none;
-    }
+  }
+  text-decoration: none;
+  :visited {
     text-decoration: none;
-        :visited {
-        text-decoration: none;
-    }
-        :hover {
-            text-decoration: none;
-        }
+  }
+  :hover {
+    text-decoration: none;
+  }
 }
 
 ol {
-    list-style: none; 
-    counter-reset: li;
-    li::before {content: counter(li); color: white;
-        display: inline-block; 
-        background-color: $color-primary;
-        border-radius: 50%;
-        padding: 5px;
-        font-size: 12px;
-        position: relative;
-        left: -35px;
-        width: 12px;
-        height: 12px;
-        text-align: center;
-           
-    }
-    @include tablet{
-        padding: 0;
-    }
+  list-style: none;
+  counter-reset: li;
+  li::before {
+    content: counter(li);
+    color: white;
+    display: inline-block;
+    background-color: $color-primary;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    position: relative;
+    left: -35px;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+  }
+  @include tablet {
+    padding: 0;
+  }
 }
 
 li {
-    counter-increment: li
+  counter-increment: li;
 }
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 h1 {
-    color: black;
-    font-weight: bolder;
+  color: black;
+  font-weight: bolder;
 }
 .logo {
-    height: 50px;
+  height: 50px;
 }
 .logo-location {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    animation: vertical-glide 1s ease-in forwards;
-    @include mobile {
-       margin: 10px 0 56px 0;
-    }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  animation: vertical-glide 1s ease-in forwards;
+  @include mobile {
+    margin: 10px 0 56px 0;
+  }
 }
 
-.location  {
-    @include mobile {
-        background-color: #dfdfdf;
-        color: rgb(57, 57, 57);
-        padding: 12px 0 12px 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: inset 0px 7px 3px -3px rgba(170, 170, 170, 0.75);
-
-    }
-        
-    }
+.location {
+  @include mobile {
+    background-color: #dfdfdf;
+    color: rgb(57, 57, 57);
+    padding: 12px 0 12px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 7px 3px -3px rgba(170, 170, 170, 0.75);
+  }
+}
 
 .fa-location-dot {
-    @include mobile {
-        padding-right: 10px;
-    }
+  @include mobile {
+    padding-right: 10px;
+  }
 }
 
 .btn-container {
-    @include mobile  {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: center;
-        align-items: center;
-        background-color: $softgrey;
-        padding-bottom: 50px;
-        width: 100%;
-        
-    }
-    
-}
-.statement01{
-    font-weight: lighter;
-    @include mobile{
-        display: flex;
-        text-align: center;
-        padding-bottom: 10px;
-        margin: 20px;
-        width: 70%;
-    
-    }
-}
-
-.btn {
-    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    padding: 15px;
-    font-size: 15px;
-    border-radius: 30px;
-    border-style: none;
-
-     @include heading-shadow;
-    a {
-        color: white;
-    }
-    &:hover{
-        transform: scale(1.1);
-        transition: transform .3s;
-        opacity: 80%;
-    }
-
-}
-
-.opt {
-    padding: 25px 10px 25px 20px;
-    border-radius: 20px;
-    font-size: 15px;
-    background-color: $softgrey;
-    width: 100%;
-    text-align:start;
-    margin-bottom: 18px;
-    font-weight: bolder;
-    margin-left: 20px;
-
-    @include heading-shadow;
-
-    .fa-solid {
-        color: grey;
-        padding-right: 15px;
-        font-size: 18px;
-    }
-    &:hover {
-        background-color: lighten($color-primary, 30);
-        transition: background-color 500ms;
-        .fa-solid{
-            color: $color-primary;
-        }
-}
-    @include mobile {
-    
-        align-items: center;
-    }
-
-    @include tablet{
-        margin-left: 0;
-    }
-}
-
-.howItWorks {
-
-    @include mobile {
-        padding: 20px 0px 90px 0px;
-        width: 100%;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-    
-
-    }
-}
-.information {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    animation: vertical-glide 1s ease-in forwards;
-  
-
-    @include mobile {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-    ol {
-        margin: 0;
-        padding: 0px;
-
-    }   
-}
-    
-}
-
-.howItWorks .btn-container {
+  @include mobile {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-
+    align-content: center;
+    align-items: center;
+    background-color: $softgrey;
+    padding-bottom: 50px;
+    width: 100%;
+  }
 }
-   
+.statement01 {
+  font-weight: lighter;
+  @include mobile {
+    display: flex;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 20px;
+    width: 70%;
+  }
+}
+
+.btn {
+  background-image: linear-gradient(
+    to bottom right,
+    $color-secondary,
+    $color-primary
+  );
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 30px;
+  border-style: none;
+
+  @include heading-shadow;
+  a {
+    color: white;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    opacity: 80%;
+  }
+}
+
+.opt {
+  padding: 25px 10px 25px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: $softgrey;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 18px;
+  font-weight: bolder;
+  margin-left: 20px;
+
+  @include heading-shadow;
+
+  .fa-solid {
+    color: grey;
+    padding-right: 15px;
+    font-size: 18px;
+  }
+  &:hover {
+    background-color: lighten($color-primary, 30);
+    transition: background-color 500ms;
+    .fa-solid {
+      color: $color-primary;
+    }
+  }
+  @include mobile {
+    align-items: center;
+  }
+
+  @include tablet {
+    margin-left: 0;
+  }
+}
+
+.howItWorks {
+  @include mobile {
+    padding: 20px 0px 90px 0px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.information {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  animation: vertical-glide 1s ease-in forwards;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    ol {
+      margin: 0;
+      padding: 0px;
+    }
+  }
+}
+
+.howItWorks .btn-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
 
 .restaurants {
-    background-color: $softgrey;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    padding: 10px 0 10px 40px;
-    animation: vertical-glide 1s ease-in forwards;
-    @include mobile {
-       display: flex;
-       flex-direction: column;
-       flex-wrap: wrap;
-       width: 100%;
-       height: auto;
-       margin: 0;
-       padding: 0;
-    }
-    @include tablet {
-        padding: 10px 0 10px 15px;
-    }
-    
+  background-color: $softgrey;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  padding: 10px 0 10px 40px;
+  animation: vertical-glide 1s ease-in forwards;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  @include tablet {
+    padding: 10px 0 10px 15px;
+  }
 }
 .Restaurant-h {
-    @include mobile {
-        padding-left: 26px;
-    }
+  @include mobile {
+    padding-left: 26px;
+  }
 }
 .Rest-Grp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-       @include mobile {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-       }
-     
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.RT-Description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  background-color: $color-tertiary;
+  padding: 5px 20px;
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  top: 16px;
+
+  @include mobile {
+    width: 12%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+    font-family: $Font;
+  }
+}
+
+.Rest-List {
+  display: flex;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 86%;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.rest-item {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 20%);
+  margin-bottom: 35px;
+  text-align: left;
+  object-fit: cover;
+  height: 260px;
+  width: 100%;
+  margin: 0 20px 20px 0;
+  position: relative;
+  @include mobile {
+    padding: 0;
+    width: 100%;
+    height: 25%;
+    margin: 0 0 20px 0;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .description-Rest {
+    line-height: 5px;
+  }
+  h3 {
+    padding-left: 10px;
+    font-size: 20px;
+  }
+  p {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  .heart-btn {
+    font-size: 25px;
+    border: transparent;
+    background-color: transparent;
+    display: flex;
+  }
+
+  .fa-regular {
+    color: $drkgrey;
+    display: inline;
+  }
+  .fa-solid {
+    display: none;
+  }
+  .heart-btn:hover .fa-regular {
+    display: none;
+  }
+  .heart-btn:hover .fa-solid {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($color-secondary),
+      to($color-primary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+  }
+
+  &:hover {
+    background-color: lighten($color-primary, 30);
+    transition: background-color 250ms;
+  }
+}
+.logo-nav {
+  display: flex;
+  align-items: center;
+  .logo-menu {
+    font-size: 20px;
+    padding: 10px 70px;
+  }
+}
+.Rest-Img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.Rest-Menu {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 20px 20px 0 0px;
+  transition: transform 600ms ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mobile {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.Rest-Elments {
+  font-weight: lighter;
+  border-bottom: solid $color-tertiary 4px;
+  padding-bottom: 8px;
+  width: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.Full-Menu {
+  width: 40%;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.menu-item {
+  background-color: white;
+  border-radius: 20px;
+  margin: 25px 0;
+  box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
+  display: flex;
+  justify-content: space-between;
+  animation: vertical-glide 3s ease-in-out forwards;
+
+  h3,
+  p {
+    margin: 8px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover .checkmark-icon {
+    width: 70px;
+  }
+  &:hover .fa-circle-check {
+    display: inline;
+    transform: rotate(360deg) 3s ease-in-out;
+    left: 0;
+  }
+  .checkmark-icon {
+    color: white;
+    background-color: white;
+    padding: 22px;
+    font-size: 22px;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 22px;
+    width: 0;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $color-tertiary;
     }
+  }
+  .fa-circle-check {
+    transition: 600ms;
+    animation-duration: 1s;
+    animation-direction: normal;
+    white-space: nowrap;
+    display: none;
+  }
+  @include mobile {
+    width: 95%;
+  }
+}
 
-    .RT-Description {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+@keyframes vertical-glide {
+  100% {
+    transform: translateY(-10%);
+  }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-    }
+.menu-title {
+  font-family: $logoFont;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  justify-content: space-evenly;
 
-    .label {
-        background-color: $color-tertiary;
-        padding: 5px 20px;
-        font-size: 12px;
-        position: absolute;
-        right: 10px;
-        top: 16px;
-       
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.menu-heart {
+  color: lighten(#ff79da, 10);
+}
 
-        @include mobile {
-            width: 12%;
-            height: auto;
-            margin: 5px;
-            padding: 5px;
-            font-family: $Font;
-
-          
-        }
-    }
-
-        .Rest-List{
-            display:flex;
-            @include mobile {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-items: center;
-                width: 86%;
-            }
-            @include tablet{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            }
-     .rest-item {
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 20%);
-        margin-bottom: 35px;
-        text-align: left;
-        object-fit: cover;
-        height: 260px;
-        width: 100%;
-        margin: 0 20px 20px 0;
-        position: relative;
-            @include mobile {
-                padding: 0;
-                width: 100%;
-                height: 25%;
-                margin: 0 0 20px 0;
-            }
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 180px;
-            border-radius: 20px 20px 0px 0px;
-        }
-        .description-Rest {
-            line-height: 5px;
-        }
-        h3 {
-            padding-left: 10px;
-            font-size: 20px;
-           
-        }
-        p {
-            padding-left: 10px;
-            font-size: 20px;
-            font-weight: lighter;
-        }
-        .heart-btn {
-            font-size: 25px;
-            border: transparent;
-            background-color: transparent;
-            display: flex;
-            
-        }
-
-        .fa-regular {
-            color: $drkgrey;
-            display: inline;
-
-        }
-        .fa-solid {
-            display: none;
-        }
-        .heart-btn:hover .fa-regular {
-            display: none;
-        }
-        .heart-btn:hover .fa-solid {
-                background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                display: inline;  
-            
-        }
-       
-        &:hover {
-            background-color: lighten($color-primary, 30);
-            transition: background-color 250ms;
-        }
-
-    }
-        .logo-nav {
-            display: flex;
-            align-items: center;
-        .logo-menu {
-            font-size: 20px;
-            padding: 10px 70px;
-        }
-    }
-        .Rest-Img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-      
-        }
-        .Rest-Menu {
-            background-color: #F2F2F2;
-            padding:20px;
-            border-radius: 20px 20px 0 0px;
-            transition: transform 600ms ease-in;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-           @include mobile {
-               padding: 10px;
-               display: flex;
-                flex-direction: column;
-              
-           
-           }
-          
-        }
-            .Rest-Elments {
-                font-weight: lighter;
-                border-bottom:  solid $color-tertiary 4px;
-                padding-bottom: 8px;
-                width: 8%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                margin: 10px;
-        
-            }
-
-            .Full-Menu {
-                width: 40%;
-               
-                @include tablet {
-                    width: 100%;
-                }
-               
-                @include mobile {
-                    width: 100%;
-                }
-               
-            }
-    
-            .menu-item {
-                background-color: white;
-                border-radius: 20px;
-                margin: 25px 0;
-                box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2);
-                display: flex;
-                justify-content: space-between;
-                animation: vertical-glide 3s ease-in-out forwards;
-                
-            
-                h3, p{
-                    margin: 8px;
-                    width: 100%;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow:ellipsis;
-
-                }
-
-                
-                &:hover .checkmark-icon {
-                        width: 70px;
-                       
-                }
-                &:hover .fa-circle-check{
-                    display: inline;
-                    transform: rotate(360deg) 3s ease-in-out;
-                    left: 0;
-                    
-                }
-                .checkmark-icon {
-                    color: white;
-                    background-color: white;
-                    padding: 22px;
-                    font-size: 22px;
-                    border-radius: 0 20px 20px 0;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    height: 22px;
-                    width: 0;
-                    transition: 0.5s ease-in-out;
-                    
-                    &:hover {
-                        background-color: $color-tertiary;
-                      
-                    }
-                    }
-                    .fa-circle-check {
-                        transition: 600ms;
-                        animation-duration: 1s;
-                        animation-direction:normal;
-                        white-space: nowrap;
-                        display: none;
-                        
-                    }
-                    @include mobile {
-                        width: 95%;
-                    }
-                
-                }
-              
-                @keyframes vertical-glide {
-    
-                    100% {
-                        transform: translateY(-10%);
-                    }
-                    0% { opacity: 0; }
-                    100% { opacity: 1; }
-                    
-                }
-                @keyframes rotate {
-
-                100% {
-
-                    transform: rotate(360deg);
-
-                }
-                }
-            
-            
-            .menu-title {
-                font-family: $logoFont;
-                display: flex;
-                justify-content: space-between;
-                width: 95%;
-                justify-content: space-evenly;
-
-                @include mobile{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                }
-            }
-            .menu-heart {
-                color:lighten(#FF79DA, 10);
-            }
-    
-            .btn-menu {
-                background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-                padding: 15px;
-                font-size: 15px;
-                border-radius: 30px;
-                border-style: none;
-                margin: 20px 0 50px 0;
-                width: 25%;
-                 @include heading-shadow;
-                a {
-                    color: white;
-                }
-                &:hover{
-                    transform: scale(1.1);
-                    transition: transform .3s;
-                    opacity: 80%;
-                }
-                @include mobile {
-                    width: 50%;
-                    align-self: center;
-                }
-            }
+.btn-menu {
+  background-image: linear-gradient(
+    to bottom right,
+    $color-secondary,
+    $color-primary
+  );
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 30px;
+  border-style: none;
+  margin: 20px 0 50px 0;
+  width: 25%;
+  @include heading-shadow;
+  a {
+    color: white;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    opacity: 80%;
+  }
+  @include mobile {
+    width: 50%;
+    align-self: center;
+  }
+}
 
 .contact {
-    margin: 50px;
+  margin: 50px;
+  @include mobile {
+    width: 100%;
+    margin: 0 0 50px 10px;
+  }
+
+  .contact-form {
+    font-family: $Font;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
     @include mobile {
-        width: 100%;
-        margin: 0 0 50px 10px;
-        
-        
+      width: 90%;
     }
+  }
+  .form-box-name {
+    border-radius: 20px;
+    border-color: $color-primary;
+    height: 20px;
+    padding: 5px;
+    margin-bottom: 25px;
+  }
+  .form-box {
+    border-radius: 20px;
+    border-color: $color-primary;
+    height: 100px;
+    font-family: $Font;
+    padding: 15px;
+  }
+  .btn {
+    width: 25%;
+    align-self: center;
+    margin-top: 25px;
+    @include mobile {
+      width: 50%;
+    }
+  }
+}
 
-    .contact-form {
-        font-family: $Font;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 50%;
-        @include mobile {
-            width: 90%;}
-    }
-    .form-box-name {
-        border-radius: 20px;
-        border-color: $color-primary;
-        height: 20px;
-        padding: 5px;
-        margin-bottom: 25px;
-    
-    }
-    .form-box {
-        border-radius: 20px;
-        border-color: $color-primary;
-        height: 100px;
-        font-family: $Font;
-        padding: 15px;
-     
-    }
-    .btn {
-        width: 25%;
-        align-self: center;
-        margin-top: 25px;
-        @include mobile {
-            width: 50%;}
-    }
-    }
-   
-
-        
-    
 footer {
-        background-color: $drkgrey;
-        color: white;
-        padding: 30px;
-        margin:0;
-       
-        bottom: 0;
-        animation: vertical-glide 1s ease-in forwards;
-      
-        .logo-footer {
-            height: 25px;  
-        }
-        .fa-utensils, .fa-handshake-angle {
-            padding-right: 10px;
-        }
+  background-color: $drkgrey;
+  color: white;
+  padding: 30px;
+  margin: 0;
 
-        a {
-            color: white;
-            &:hover {
-                color: $color-primary;
-            }
-        }
-       
+  bottom: 0;
+  animation: vertical-glide 1s ease-in forwards;
 
+  .logo-footer {
+    height: 25px;
+  }
+  .fa-utensils,
+  .fa-handshake-angle {
+    padding-right: 10px;
+  }
 
-       
+  a {
+    color: white;
+    &:hover {
+      color: $color-primary;
     }
-
-    
+  }
+}

@@ -21,9 +21,9 @@ body {
 .loader {
   content: " ";
   background-color: white;
-  border: 16px solid #FF79DA;
+  border: 16px solid #ff79da;
   border-radius: 50%;
-  border-top: 16px solid #9356DC;
+  border-top: 16px solid #9356dc;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 3s ease-out forwards;
@@ -112,7 +112,7 @@ ol li::before {
   content: counter(li);
   color: white;
   display: inline-block;
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 50%;
   padding: 5px;
   font-size: 12px;
@@ -212,7 +212,7 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     padding-bottom: 50px;
     width: 100%;
   }
@@ -235,8 +235,8 @@ h1 {
 }
 
 .btn {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 15px;
   font-size: 15px;
   border-radius: 30px;
@@ -252,10 +252,10 @@ h1 {
 .btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   opacity: 80%;
 }
 
@@ -263,7 +263,7 @@ h1 {
   padding: 25px 10px 25px 20px;
   border-radius: 20px;
   font-size: 15px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   width: 100%;
   text-align: start;
   margin-bottom: 18px;
@@ -286,7 +286,7 @@ h1 {
 }
 
 .opt:hover .fa-solid {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 @media (max-width: 425px) {
@@ -378,9 +378,9 @@ h1 {
 }
 
 .restaurants {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 10px 0 10px 40px;
   -webkit-animation: vertical-glide 1s ease-in forwards;
           animation: vertical-glide 1s ease-in forwards;
@@ -465,7 +465,7 @@ h1 {
 }
 
 .label {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 5px 20px;
   font-size: 12px;
   position: absolute;
@@ -591,7 +591,7 @@ h1 {
 }
 
 .rest-item .heart-btn:hover .fa-solid {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -626,7 +626,7 @@ h1 {
 }
 
 .Rest-Menu {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 20px;
   border-radius: 20px 20px 0 0px;
   -webkit-transition: -webkit-transform 600ms ease-in;
@@ -660,7 +660,7 @@ h1 {
 
 .Rest-Elments {
   font-weight: lighter;
-  border-bottom: solid #99E2D0 4px;
+  border-bottom: solid #99e2d0 4px;
   padding-bottom: 8px;
   width: 8%;
   display: -webkit-box;
@@ -708,7 +708,8 @@ h1 {
           animation: vertical-glide 3s ease-in-out forwards;
 }
 
-.menu-item h3, .menu-item p {
+.menu-item h3,
+.menu-item p {
   margin: 8px;
   width: 100%;
   white-space: nowrap;
@@ -743,7 +744,7 @@ h1 {
 }
 
 .menu-item .checkmark-icon:hover {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 .menu-item .fa-circle-check {
@@ -837,8 +838,8 @@ h1 {
 }
 
 .btn-menu {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 15px;
   font-size: 15px;
   border-radius: 30px;
@@ -856,10 +857,10 @@ h1 {
 .btn-menu:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   opacity: 80%;
 }
 
@@ -905,7 +906,7 @@ h1 {
 
 .contact .form-box-name {
   border-radius: 20px;
-  border-color: #9356DC;
+  border-color: #9356dc;
   height: 20px;
   padding: 5px;
   margin-bottom: 25px;
@@ -913,7 +914,7 @@ h1 {
 
 .contact .form-box {
   border-radius: 20px;
-  border-color: #9356DC;
+  border-color: #9356dc;
   height: 100px;
   font-family: Roboto;
   padding: 15px;
@@ -947,7 +948,8 @@ footer .logo-footer {
   height: 25px;
 }
 
-footer .fa-utensils, footer .fa-handshake-angle {
+footer .fa-utensils,
+footer .fa-handshake-angle {
   padding-right: 10px;
 }
 
@@ -956,6 +958,6 @@ footer a {
 }
 
 footer a:hover {
-  color: #9356DC;
+  color: #9356dc;
 }
 /*# sourceMappingURL=style.css.map */
