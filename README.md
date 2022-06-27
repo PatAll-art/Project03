@@ -1,8 +1,7 @@
 # Ohmyfood
 
 Demonstration site showcasing HTML, CSS, and Sass.
-
-	![alt text](/images/logo/ohmyfood.png)
+! [logo](/images/logo/ohmyfood.png)
 
 ## Technology Used
 
