@@ -747,12 +747,6 @@ h1 {
 }
 
 .menu-item .fa-circle-check {
-  -webkit-transition: 600ms;
-  transition: 600ms;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
   white-space: nowrap;
   display: none;
 }
