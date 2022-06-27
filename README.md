@@ -2,7 +2,7 @@
 
 Demonstration site showcasing HTML, CSS, and Sass.
 
-[WebLink] (https://patall-art.github.io/Project03/)
+[OhmyFood] (https://patall-art.github.io/Project03/)
 
 ## Grahic Information
 [logo](/images/logo/ohmyfood.png)
