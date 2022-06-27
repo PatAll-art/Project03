@@ -327,6 +327,10 @@ h1 {
   position: absolute;
   right: 10px;
   top: 16px;
+  color: #438675;
+
+
+  
 
   @include mobile {
     width: 12%;
@@ -334,6 +338,8 @@ h1 {
     margin: 5px;
     padding: 5px;
     font-family: $Font;
+    display: flex;
+    justify-content: center;
   }
 }
 

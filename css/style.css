@@ -471,6 +471,7 @@ h1 {
   position: absolute;
   right: 10px;
   top: 16px;
+  color: #438675;
 }
 
 @media (max-width: 425px) {
@@ -480,6 +481,12 @@ h1 {
     margin: 5px;
     padding: 5px;
     font-family: Roboto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
