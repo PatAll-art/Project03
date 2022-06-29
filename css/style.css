@@ -650,6 +650,8 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  margin-top: -100px;
 }
 
 @media (max-width: 425px) {
@@ -713,12 +715,13 @@ h1 {
           justify-content: space-between;
   -webkit-animation: vertical-glide 3s ease-in-out forwards;
           animation: vertical-glide 3s ease-in-out forwards;
+  overflow: hidden;
 }
 
 .menu-item h3,
 .menu-item p {
   margin: 8px;
-  width: 100%;
+  width: 70%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -830,6 +833,7 @@ h1 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    font-size: 20px;
   }
 }
 
