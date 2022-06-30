@@ -721,7 +721,7 @@ h1 {
 .menu-item h3,
 .menu-item p {
   margin: 8px;
-  width: 70%;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -764,6 +764,12 @@ h1 {
 @media (max-width: 425px) {
   .menu-item {
     width: 95%;
+  }
+  .menu-item p, .menu-item h3 {
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -838,7 +844,15 @@ h1 {
 }
 
 .menu-heart {
-  color: #fface8;
+  color: #4e4e4e;
+}
+
+.menu-heart:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
 }
 
 .btn-menu {
